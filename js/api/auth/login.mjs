@@ -1,17 +1,15 @@
-//import { API_AUTH, API_REGISTER, API_BASE_URL_V2 } from "../constants.mjs";
-
 import { API_SOCIAL_URL } from "../constants.mjs";
 
-const action = "/auth/register";
+const action = "/auth/login";
 const method = "post";
 
-export async function register(profile) {
-    const registerURL = API_SOCIAL_URL + action;
-    console.log(registerURL);
+export async function login(profile) {
+    const loginURL = API_SOCIAL_URL + action;
+    console.log(loginURL);
 
     const body = JSON.stringify(profile);
 
-    const response = await fetch(registerURL, {
+    const response = await fetch(loginURL, {
     headers: {
         "Content-Type": "application/json"
     },
@@ -21,7 +19,7 @@ export async function register(profile) {
 
 if (response.ok) {
     return await response.json();
-    console.log(result);
+    console.log(response);
 }
 // This line will execute if response.ok is false
 throw new Error(response.statusText);
