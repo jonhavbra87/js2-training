@@ -1,4 +1,4 @@
-export const API_KEY = "6de413cd-5dac-4d7a-8b52-8ad2741437a4";
+/* export const API_KEY = "6de413cd-5dac-4d7a-8b52-8ad2741437a4";
 
 export const API_BASE = "https://v2.api.noroff.dev";
 export const API_AUTH = "/auth";
@@ -23,7 +23,7 @@ export async function getPosts() {
     });
     return await response.json();
 }
-
+ */
 //Already got my key so I don't need this code:
 /* export async function getAPIKey() {
     const response = await fetch(API_BASE + API_AUTH + API_KEY_URL, {
@@ -44,7 +44,8 @@ export async function getPosts() {
     throw new Error("Could not register for an API key!");
 }
  */
-export async function register(name, email, password) {
+
+/* export async function register(name, email, password) {
     const response = await fetch(API_BASE + API_AUTH + API_REGISTER, {
         headers: {
             "Content-Type": "application/json"
@@ -100,5 +101,5 @@ export function setAuthListener() {
     document.forms.auth.addEventListener("submit", onAuth);
 }
 
-setAuthListener();
+setAuthListener(); */
 //getAPIKey().then(console.log);

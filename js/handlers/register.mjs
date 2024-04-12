@@ -10,9 +10,7 @@ export function setRegisterFormListenter() {
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries())
             console.log("I'm going to register the user with the following data: ", profile)
-    
-            //Send it to the API (code is in auth/register.mjs)
-    
+
             register(profile);
         }) 
     }

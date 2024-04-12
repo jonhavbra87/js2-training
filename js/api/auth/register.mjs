@@ -1,5 +1,3 @@
-//import { API_AUTH, API_REGISTER, API_BASE_URL_V2 } from "../constants.mjs";
-
 import { API_SOCIAL_URL } from "../constants.mjs";
 
 const action = "/auth/register";
@@ -21,5 +19,6 @@ export async function register(profile) {
 
   const result = await response.json();
   console.log(result);
+  alert("You have been registered in successfully");
   return result;
 }
