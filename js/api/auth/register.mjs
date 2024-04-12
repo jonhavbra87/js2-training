@@ -6,23 +6,20 @@ const action = "/auth/register";
 const method = "post";
 
 export async function register(profile) {
-    const registerURL = API_SOCIAL_URL + action;
-    console.log(registerURL);
+  const registerURL = API_SOCIAL_URL + action;
+  console.log(registerURL);
 
-    const body = JSON.stringify(profile);
+  const body = JSON.stringify(profile);
 
-    const response = await fetch(registerURL, {
+  const response = await fetch(registerURL, {
     headers: {
-        "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     method,
-    body
-})
+    body,
+  });
 
-if (response.ok) {
-    return await response.json();
-    console.log(result);
-}
-// This line will execute if response.ok is false
-throw new Error(response.statusText);
+  const result = await response.json();
+  console.log(result);
+  return result;
 }

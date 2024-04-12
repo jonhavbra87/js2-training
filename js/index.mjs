@@ -2,7 +2,6 @@ import { setLoginFormListenter } from "./handlers/login.mjs";
 import { setRegisterFormListenter } from "./handlers/register.mjs";
 
 const path = location.pathname;
-console.log(path);
 
 //setLoginFormListenter();
 if (path === "/profile/login/") {

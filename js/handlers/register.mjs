@@ -2,19 +2,20 @@ import { register } from "../api/auth/register.mjs"
 
 export function setRegisterFormListenter() {
     const form = document.querySelector("#registerForm");
-
-    form.addEventListener("submit", (event) => {
-        event.preventDefault()
-        
-        const form = event.target;
-        const formData = new FormData(form);
-        const profile = Object.fromEntries(formData.entries())
-        console.log("I'm going to register the user with the following data: ", profile)
-
-        //Send it to the API (code is in auth/register.mjs)
-
-        register(profile);
-    })
+    if (!form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault()
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const profile = Object.fromEntries(formData.entries())
+            console.log("I'm going to register the user with the following data: ", profile)
+    
+            //Send it to the API (code is in auth/register.mjs)
+    
+            register(profile);
+        }) 
+    }
 }
 
 
