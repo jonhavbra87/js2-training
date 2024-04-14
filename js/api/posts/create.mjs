@@ -13,10 +13,9 @@ export async function createPost(postData) {
   });
 
   if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    throw new Error(`HTTP error! status: ${response.statusText}`);
   }
 
 return await response.json();
 
-console.log(post);
 }

@@ -1,4 +1,10 @@
-/* export const API_KEY = "6de413cd-5dac-4d7a-8b52-8ad2741437a4";
+/* 
+
+-------------  API V2  ------
+
+
+
+export const API_KEY = "6de413cd-5dac-4d7a-8b52-8ad2741437a4";
 
 export const API_BASE = "https://v2.api.noroff.dev";
 export const API_AUTH = "/auth";
