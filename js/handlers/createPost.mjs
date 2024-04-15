@@ -4,8 +4,10 @@ export function setCreatePostListener() {
     const form = document.querySelector("#createPost");
 
     if (form) {
+        console.log("Form found, attaching event listener.");
         form.addEventListener("submit", (event) => {
             event.preventDefault();
+            console.log("Form submission intercepted."); // Check if this logs
             const form = event.target;
             const formData = new FormData(form);
             const post = Object.fromEntries(formData.entries())

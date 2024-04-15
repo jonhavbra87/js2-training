@@ -1,11 +1,15 @@
 import { load } from "../storage/index.mjs";
 
 export async function headers() {
-    const token = load("token");
-
+    const accessToken = load("accessToken");
+    
+    if (!accessToken) {
+        console.error("No access token available.");
+        throw new Error("No access token available");
+    }
     return {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`
+        "Authorization": `Bearer ${accessToken}`
     }
 }
 
