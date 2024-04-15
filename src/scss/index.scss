@@ -1,1 +1,7 @@
+.form-control:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
