@@ -15,24 +15,21 @@ if (path === "/profile/login/") {
     listeners.setUpdatePostListenter();
 } else if (path === "/") {
     listeners.setLoginFormListenter();
+} else if (path === "/posts/") {
+    testTemplate();
 } else {
     console.log("I'm not going to do anything because I'm not on the login or register page");
 }
 
 //Rendering the post(s)
-/* async function testTemplate() {
+async function testTemplate() {
+    console.log("I'm on the posts page");
     const posts = await postMethods.getPosts();
-    console.log(posts);
-    if (posts.length > 0) {
-        const post = posts[25];
-        const container = document.querySelector("#post");
-        templates.renderPostTemplates(posts, container);
-    } else {
-        console.log('No posts to display');
-    }
-}
 
-testTemplate() */
+    const container = document.querySelector("#post");
+    templates.renderPostTemplates(posts, container);
+    console.log(posts);
+}
 
 /* createPost( {
     title: "examplasdf",
